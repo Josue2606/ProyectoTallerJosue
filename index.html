@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Trabajos Universitarios - UPLA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Logo UPLA" class="logo-img">
+                <a href="#inicio">Trabajos UPLA</a>
+            </div>
+            <div class="nav-menu">
+                <a href="#inicio" class="nav-link active" data-page="inicio">Inicio</a>
+                <a href="#sobremi" class="nav-link" data-page="sobremi">Sobre Mí</a>
+                <a href="#tareas" class="nav-link" data-page="tareas">Tareas por Semana</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Página de Inicio -->
+        <section id="inicio" class="page active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>Taller VII: Desarrollo de Aplicaciones I</h1>
+                    <p>Universidad Peruana Los Andes - UPLA</p>
+                    <a href="#tareas" class="btn-primary">Ver Tareas</a>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="container">
+                    <h2 class="section-title">Información del Curso</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <i class="fas fa-university"></i>
+                            <h3>Universidad</h3>
+                            <p>Universidad Peruana Los Andes (UPLA) - Institución educativa comprometida con la formación profesional de calidad en el Perú.</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-user-tie"></i>
+                            <h3>Docente</h3>
+                            <p><strong>Mg. Fernandez Bejarano Raul</strong><br>Magister en Ingeniería de Software con más de 10 años de experiencia en desarrollo de aplicaciones. Especialista en arquitectura MVC y tecnologías web modernas.</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Curso</h3>
+                            <p><strong>Taller VII: Desarrollo de Aplicaciones I</strong><br>Curso práctico enfocado en el desarrollo de aplicaciones web utilizando el patrón Modelo-Vista-Controlador (MVC) y tecnologías frontend modernas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Sobre Mí -->
+        <section id="sobremi" class="page">
+            <div class="container">
+                <h2 class="section-title">Sobre Mí</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/josue.jpeg" alt="Josue Anthony Arredondo Condor" id="profile-img">
+                    </div>
+                    <div class="about-text">
+                        <h3>Hola, soy Josue Anthony Arredondo Condor</h3>
+                        <p>Estudiante de la Universidad Peruana Los Andes, apasionado por el desarrollo web y la tecnología. Actualmente cursando el Taller VII: Desarrollo de Aplicaciones I donde aplico mis conocimientos en proyectos prácticos utilizando el patrón MVC.</p>
+                        
+                        <div class="skills">
+                            <h4>Habilidades Técnicas</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Git & GitHub</span>
+                                <span class="skill-tag">Responsive Design</span>
+                                <span class="skill-tag">Modelo Vista Controlador</span>
+                            </div>
+                        </div>
+                        
+                        <div class="education">
+                            <h4>Formación Académica</h4>
+                            <div class="education-item">
+                                <h5>Universidad Peruana Los Andes (UPLA)</h5>
+                                <p>Carrera de Ingeniería de Sistemas e Informática</p>
+                                <p class="education-date">2025 - Actualidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Tareas por Semana -->
+        <section id="tareas" class="page">
+            <div class="container">
+                <h2 class="section-title">Tareas por Semana</h2>
+                <p class="section-subtitle">Selecciona una semana para ver sus tareas y recursos</p>
+                
+                <div class="weeks-container">
+                    <!-- Semana 1 -->
+                    <div class="week-card">
+                        <div class="week-header">
+                            <h3>Semana 1</h3>
+                            <span class="week-toggle"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="week-content">
+                            <div class="week-option" data-action="contenido" data-week="1">
+                                <i class="fas fa-eye"></i>
+                                <span>Ver Contenido</span>
+                            </div>
+                            <div class="week-option" data-action="descargar" data-week="1">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </div>
+                            <div class="week-option" data-action="github" data-week="1">
+                                <i class="fab fa-github"></i>
+                                <span>Ver en GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Semana 2 -->
+                    <div class="week-card">
+                        <div class="week-header">
+                            <h3>Semana 2</h3>
+                            <span class="week-toggle"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="week-content">
+                            <div class="week-option" data-action="contenido" data-week="2">
+                                <i class="fas fa-eye"></i>
+                                <span>Ver Contenido</span>
+                            </div>
+                            <div class="week-option" data-action="descargar" data-week="2">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </div>
+                            <div class="week-option" data-action="github" data-week="2">
+                                <i class="fab fa-github"></i>
+                                <span>Ver en GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Semana 3 -->
+                    <div class="week-card">
+                        <div class="week-header">
+                            <h3>Semana 3</h3>
+                            <span class="week-toggle"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="week-content">
+                            <div class="week-option" data-action="contenido" data-week="3">
+                                <i class="fas fa-eye"></i>
+                                <span>Ver Contenido</span>
+                            </div>
+                            <div class="week-option" data-action="descargar" data-week="3">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </div>
+                            <div class="week-option" data-action="github" data-week="3">
+                                <i class="fab fa-github"></i>
+                                <span>Ver en GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semana 4 -->
+                    <div class="week-card">
+                        <div class="week-header">
+                            <h3>Semana 4</h3>
+                            <span class="week-toggle"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="week-content">
+                            <div class="week-option" data-action="contenido" data-week="4">
+                                <i class="fas fa-eye"></i>
+                                <span>Ver Contenido</span>
+                            </div>
+                            <div class="week-option" data-action="descargar" data-week="4">
+                                <i class="fas fa-download"></i>
+                                <span>Descargar</span>
+                            </div>
+                            <div class="week-option" data-action="github" data-week="4">
+                                <i class="fab fa-github"></i>
+                                <span>Ver en GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para contenido de semana -->
+    <div id="contentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Contenido de la Semana</h2>
+            <div id="modal-body">
+                <!-- El contenido se cargará dinámicamente aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>

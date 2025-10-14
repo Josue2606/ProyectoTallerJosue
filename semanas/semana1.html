@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Semana 1 - Portafolio DDA</title> <!-- Título específico para esta página -->
+      <meta name="keywords" content="java swing semana 1 upla">
+      <meta name="description" content="Ejercicios Semana 1: Calculadora de Inversión y Descuento en Camisas">
+      <meta name="author" content="Josue Anthony Arredondo Condor">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+       
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+      <!-- Estilos personalizados para la página (bonito, animado y dinámico) -->
+      <style>
+         body {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 50%, #4158d0 100%);
+            color: #ffffff;
+         }
+
+         .header_section {
+            background: rgba(255, 255, 255, 0.1); /* Transparente para fondo degradado */
+         }
+
+         /* Animación de entrada para la página */
+         .content-section {
+            animation: slideInUp 0.6s ease-out;
+         }
+
+         @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+         }
+
+         /* Botones animados */
+         .btn-custom {
+            background: linear-gradient(45deg, #4158d0, #c850c0);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 5px;
+         }
+
+         .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(65, 88, 208, 0.4);
+         }
+
+         /* Secciones colapsables dinámicas (usuario decide ver/ocultar) */
+         .collapse-section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 0;
+         }
+
+         .collapse-section.show {
+            max-height: 2000px; /* Ajusta si el contenido es más largo */
+            padding: 20px;
+         }
+
+         /* Código Java: Estilo resaltado */
+         .code-block {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            color: #f8f8f2;
+            font-size: 14px;
+            line-height: 1.5;
+         }
+
+         /* Slider: Ajustes para Owl Carousel */
+         .owl-carousel .item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            margin: 10px;
+         }
+
+         .owl-dots {
+            margin-top: 25px;
+         }
+
+         .owl-nav {
+            margin-top: 20px;
+         }
+
+         /* Footer de botones fijo o en sección */
+         .action-buttons {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Header con Navbar (mismo que en index.html y Unidades.html) -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="images/Uplalogo.png"></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="Unidades.html">Unidades</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="https://github.com/Josue2606">Github</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#sobreMi">Informacion</a> <!-- Placeholder, ajusta si necesitas -->
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      <!-- Header end -->
+
+      <!-- Contenido Principal: Sección con Slider y Dinámicas -->
+      <div class="container my-5 content-section">
+         <div class="row">
+            <div class="col-12">
+               <h1 class="text-center mb-4">📚 Semana 1 - Desarrollo de Aplicativos</h1>
+               <p class="text-center lead">Ejercicios básicos en Java con Swing: Interfaces gráficas y manejo de eventos.</p>
+               
+               <!-- Slider con Owl Carousel (dinámico: usuario navega manualmente) -->
+               <div class="owl-carousel owl-theme" id="sliderSemana1">
+                  <!-- Slide 1: Descripción General (inicial) -->
+                  <div class="item">
+                     <h3>Descripción General</h3>
+                     <p>En esta semana, creé dos aplicaciones de escritorio en NetBeans:</p>
+                     <ul class="list-unstyled">
+                        <li>🔹 <b>Calculadora de Inversión:</b> Calcula el costo total para una empresa en una feria (alquiler de stand, publicidad, personal).</li>
+                        <li>🔹 <b>Descuento en Camisas:</b> Determina descuentos basados en la cantidad comprada y muestra el monto final.</li>
+                     </ul>
+                     <p>Objetivo: Introducción a JFrame, componentes Swing y eventos de botones.</p>
+                     
+                     <!-- Botones para contenido dinámico (usuario decide ver) -->
+                     <button class="btn btn-custom" onclick="toggleSection('contenido-detalle')">Ver Contenido Detallado</button>
+                     <button class="btn btn-custom" onclick="toggleSection('codigo')">Ver Código Java</button>
+                     <button class="btn btn-custom" onclick="toggleSection('imagenes')">Ver Imágenes</button>
+                     
+                     <!-- Sección colapsable: Contenido Detallado (inicialmente oculta) -->
+                     <div id="contenido-detalle" class="collapse-section mt-3">
+                        <h4>Detalles de los Ejercicios</h4>
+                        <p><b>Calculadora de Inversión:</b> El usuario ingresa valores numéricos en campos de texto. Al clic en "Calcular", suma los costos y valida entradas (manejo de excepciones).</p>
+                        <p><b>Descuento en Camisas:</b> Reglas: 1-5 camisas (sin descuento), 6-10 (10%), >10 (20%). Muestra total con descuento aplicado.</p>
+                        <p>Ambos usan GridLayout para la interfaz y ActionListener para eventos.</p>
+                     </div>
+                     
+                     <!-- Sección colapsable: Código (inicialmente oculta) -->
+                     <div id="codigo" class="collapse-section mt-3">
+                        <h4>Ejemplo de Código - Calculadora de Inversión</h4>
+                        <div class="code-block">
+// Calculadora de Inversión - Semana 1
+// Autor: Josue Anthony Arredondo Condor
+// Uso: NetBeans con Swing
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class CalculadoraInversion extends JFrame {
+    private JTextField txtAlquiler, txtPublicidad, txtPersonal;
+    private JButton btnCalcular;
+    private JLabel lblTotal;
+
+    public CalculadoraInversion() {
+        setTitle("Calculadora de Inversión - Feria Comercial");
+        setSize(350, 250);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridLayout(5, 2, 10, 10));
+
+        // Componentes
+        add(new JLabel("Alquiler de Stand (S/):"));
+        txtAlquiler = new JTextField();
+        add(txtAlquiler);
+
+        add(new JLabel("Publicidad (S/):"));
+        txtPublicidad = new JTextField();
+        add(txtPublicidad);
+
+        add(new JLabel("Personal (S/):"));
+        txtPersonal = new JTextField();
+        add(txtPersonal);
+
+        add(new JLabel(""));
+        btnCalcular = new JButton("Calcular Total");
+        add(btnCalcular);
+
+        lblTotal = new JLabel("Total: S/ 0.00");
+        add(lblTotal);
+
+        // Evento del botón
+        btnCalcular.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    double alquiler = Double.parseDouble(txtAlquiler.getText());
+                    double publicidad = Double.parseDouble(txtPublicidad.getText());
+                    double personal = Double.parseDouble(txtPersonal.getText());
+                    double total = alquiler + publicidad + personal;
+                    lblTotal.setText("Total: S/ " + String.format("%.2f", total));
+                } catch (NumberFormatException ex) {
+                    lblTotal.setText("Error: Ingresa solo números válidos");
+                }
+            }
+        });
+
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new CalculadoraInversion());
+    }
+}
+                        </div>
+                        <p class="mt-2 small">Nota: Código simplificado. El ejercicio de Descuento en Camisas sigue una estructura similar.</p>
+                     </div>
+                     
+                     <!-- Sección colapsable: Imágenes (inicialmente oculta) -->
+                     <div id="imagenes" class="collapse-section mt-3">
+                        <h4>Capturas de Pantalla</h4>
+                        <div class="row">
+                           <div class="col-md-6">
+                              <img src="images/CapturaSem1Josue.jpg" alt="Captura Calculadora" class="img-fluid rounded shadow" style="max-height: 200px;">
+                              <p class="text-center mt-2">Interfaz de Calculadora</p>
+                           </div>
+                           <div class="col-md-6">
+                              <img src="images/JosueImg2Semana1.jpg" alt="Captura Descuento" class="img-fluid rounded shadow" style="max-height: 200px;">
+                              <p class="text-center mt-2">Interfaz de Descuento</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Slide 2: Más Detalles o Resumen (para navegación en slider) -->
+                  <div class="item">
+                     <h3>Resumen de Aprendizajes</h3>
+                     <p>En esta semana, aprendí a:</p>
+                     <ul class="list-unstyled text-start">
+                        <li>• Crear ventanas con JFrame y layouts básicos.</li>
+                        <li>• Manejar entradas de usuario con JTextField y eventos con JButton.</li>
+                        <li>• Validar datos y mostrar resultados en JLabel.</li>
+                     </ul>
+                     <p>Estos ejercicios forman la base para aplicaciones más complejas en Swing.</p>
+                     <img src="images/ImagenBanner.png" alt="Banner General" class="img-fluid rounded shadow mt-3" style="max-height: 250px;"> <!-- Placeholder, usa una imagen tuya -->
+                  </div>
+
+                  <!-- Agrega más slides si quieres (ej. video o reflexión) -->
+               </div>
+
+               <!-- Botones de Acción (Regresar, Descargar, GitHub) -->
+               <div class="action-buttons text-center">
+                  <a href="Unidades.html" class="btn btn-secondary mr-3">← Regresar a Trabajos por Semana</a>
+                  <a href="downloads/semana1.rar" download class="btn btn-success">Descargar Proyecto (.rar)</a>
+                  <a href="https://github.com/Josue2606" target="_blank" class="btn btn-primary ml-3">Ver en GitHub (Repositorio Principal)</a> <!-- Placeholder: Cambia cuando tengas el link específico -->
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Footer (opcional, similar a index.html) -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="adderss_text">Contactame</h1>
+                  <div class="map_icon"><span class="paddlin_left_0">+51 946 525 842</span></div>
+                  <div class="map_icon"><span class="paddlin_left_0">t01258f@ms.upla.edu.pe</span></div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="adderss_text">Salon A1-IVciclo </h1>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="adderss_text">Repositorio de trabajos</h1>
+                  <div class="Useful_text">Esta pagina esta sujeta a cambios ,por ello algunas veces no estara disponible para todo publico</div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <!-- Columna vacía o adicional si necesitas -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2025 esta pagina web esta libre de fines de lucro </p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+
+      <!-- Javascript files (mismos que en las otras páginas) -->
+      <script src="../js/jquery.min.js"></script> <!-- Ajuste: ../ para raíz -->
+      <script src="../js/popper.min.js"></script> <!-- Ajuste: ../ para raíz -->
+      <script src="../js/bootstrap.bundle.min.js"></script> <!-- Ajuste: ../ para raíz -->
+      <script src="../js/jquery-3.0.0.min.js"></script> <!-- Ajuste: ../ para raíz -->
+      <script src="../js/plugin.js"></script> <!-- Ajuste: ../ para raíz -->
+      <!-- sidebar -->
+      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script> <!-- Ajuste: ../ para raíz -->
+      <script src="../js/custom.js"></script> <!-- Ajuste: ../ para raíz -->
+      <!-- javascript -->
+      <script src="../js/owl.carousel.js"></script> <!-- Ajuste: ../ para raíz -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+      <!-- JavaScript personalizado para el slider y secciones dinámicas (inicializa al cargar la página) -->
+      <script>
+         $(document).ready(function() {
+            // Inicializar Owl Carousel para el slider (dinámico y animado)
+            $("#sliderSemana1").owlCarousel({
+               loop: true,                    // Bucle infinito
+               margin: 10,                    // Espacio entre slides
+               nav: true,                     // Flechas de navegación (movimiento manual)
+               dots: true,                    // Puntos para slides
+               autoplay: false,               // No auto-play (usuario decide navegar)
+               responsive: {
+                  0: { items: 1 },           // 1 slide en móvil
+                  600: { items: 1 },         // 1 en tablet
+                  1000: { items: 1 }         // 1 en desktop (full width)
+               },
+               animateOut: 'fadeOut',         // Animación suave de salida
+               animateIn: 'fadeIn'            // Animación de entrada
+            });
+         });
+
+         // Función para secciones colapsables dinámicas (usuario decide ver/ocultar con clic)
+         function toggleSection(id) {
+            var section = document.getElementById(id);
+            if (section) {
+               section.classList.toggle('show');
+               // Cambiar texto del botón para mejor feedback (opcional)
+               var btn = event.target;
+               if (section.classList.contains('show')) {
+                  btn.textContent = btn.textContent.replace('Ver', 'Ocultar');
+               } else {
+                  btn.textContent = btn.textContent.replace('Ocultar', 'Ver');
+               }
+            }
+         }
+      </script>
+
+   </body>
+</html>
