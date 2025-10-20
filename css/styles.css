@@ -438,3 +438,24 @@ body {
     margin-right: 0.5rem;
     color: var(--primary-color);
 }
+
+/* Agregar al archivo styles.css */
+.language-sql .hljs-keyword {
+    color: #f92672;
+}
+
+.language-sql .hljs-built_in {
+    color: #66d9ef;
+}
+
+.language-sql .hljs-string {
+    color: #a6e22e;
+}
+
+.language-sql .hljs-number {
+    color: #ae81ff;
+}
+
+.language-sql .hljs-comment {
+    color: #75715e;
+}
