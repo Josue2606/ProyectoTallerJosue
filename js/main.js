@@ -1136,14 +1136,14 @@ function downloadWeek(week) {
 function openGitHub(week) {
     // Rutas locales para cada semana
     const localRoutes = {
-        1: '/semanas/Semana1/',
-        2: '/semanas/Semana2/',
-        3: '/semanas/Semana3/',
-        4: '/semanas/Semana4/',
-        5: '/semanas/Semana5/',
-        6: '/semanas/Semana6/',
-        7: '/semanas/Semana7/',
-        8: '/semanas/Semana8/'
+        1: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana1',
+        2: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana2',
+        3: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana3',
+        4: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana4',
+        5: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana5',
+        6: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana6',
+        7: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana7',
+        8: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana8'
     };
     
     const route = localRoutes[week] || '/semanas/';
