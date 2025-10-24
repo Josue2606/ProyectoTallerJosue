@@ -527,7 +527,9 @@ class Controller {
                 
                 <div id="presentacion" class="tab-content active">
                     <h3>Semana 4 - Avanzando en el Desarrollo</h3>
-                    <p>Continuamos con el desarrollo de aplicaciones web, enfocándonos en aspectos más avanzados de JavaScript y la interacción con APIs.</p>
+                    <p>Continuamos con el desarrollo de 
+                    
+                    aplicaciones web, enfocándonos en aspectos más avanzados de JavaScript y la interacción con APIs.</p>
                     
                     <h3>Temas Cubiertos</h3>
                     <ul>
@@ -1127,23 +1129,25 @@ function downloadWeek(week) {
     alert(`Iniciando descarga de archivos de la semana ${week}`);
     
     // En un entorno real, descomenta la siguiente línea:
-    // window.location.href = `archivos/semana${week}.rar`;
+    // window.location.href = `archivos/semana${week}.rar`; 
 }
 
-// Abrir GitHub
+// Abrir en rutas locales de semanas
 function openGitHub(week) {
-    // En un entorno real, actualiza con tu URL de GitHub
-    const githubUrls = {
-        1: 'https://github.com/tuusuario/semana1',
-        2: 'https://github.com/tuusuario/semana2',
-        3: 'https://github.com/tuusuario/semana3',
-        4: 'https://github.com/tuusuario/semana4',
-        5: 'https://github.com/tuusuario/semana5',
-        6: 'https://github.com/tuusuario/semana6',
-        7: 'https://github.com/tuusuario/semana7',
-        8: 'https://github.com/tuusuario/semana8'
+    // Rutas locales para cada semana
+    const localRoutes = {
+        1: '/semanas/Semana1/',
+        2: '/semanas/Semana2/',
+        3: '/semanas/Semana3/',
+        4: '/semanas/Semana4/',
+        5: '/semanas/Semana5/',
+        6: '/semanas/Semana6/',
+        7: '/semanas/Semana7/',
+        8: '/semanas/Semana8/'
     };
     
-    const url = githubUrls[week] || 'https://github.com';
-    window.open(url, '_blank');
+    const route = localRoutes[week] || '/semanas/';
+    
+    // Abrir en la misma ventana (puedes cambiar a '_blank' si prefieres nueva pestaña)
+    window.open(route, '_blank');
 }
