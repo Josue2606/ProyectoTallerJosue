@@ -1132,11 +1132,11 @@ function downloadWeek(week) {
     // window.location.href = `archivos/semana${week}.rar`; 
 }
 
-// Abrir en rutas locales de semanas
+// Abrir GitHub con rutas específicas por semana
 function openGitHub(week) {
-    // Rutas locales para cada semana
-    const localRoutes = {
-        1: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana1',
+    // Rutas específicas para cada semana
+    const githubUrls = {
+         1: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana1',
         2: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana2',
         3: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana3',
         4: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana4',
@@ -1146,8 +1146,14 @@ function openGitHub(week) {
         8: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana8'
     };
     
-    const route = localRoutes[week] || '/semanas/';
+    const url = githubUrls[week] || '/semanas/';
     
-    // Abrir en la misma ventana (puedes cambiar a '_blank' si prefieres nueva pestaña)
-    window.open(route, '_blank');
+    // Verificar si estamos en el mismo dominio o necesitamos ruta absoluta
+    if (url.startsWith('/')) {
+        // Ruta relativa al dominio actual
+        window.open(url, '_blank');
+    } else {
+        // URL completa
+        window.open(url, '_blank');
+    }
 }
