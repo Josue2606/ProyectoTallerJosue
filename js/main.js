@@ -1121,7 +1121,7 @@ function initModalTabs() {
             }
         });
     });
-}
+}   
 
 // Descargar archivo de la semana
 function downloadWeek(week) {
@@ -1132,9 +1132,9 @@ function downloadWeek(week) {
     // window.location.href = `archivos/semana${week}.rar`; 
 }
 
-// Abrir en tu repositorio específico de GitHub
+// Abrir en tu repositorio específico de GitHub - CORREGIDO
 function openGitHub(week) {
-    // Rutas específicas para cada semana en tu repositorio
+    // URLs directas al árbol de tu repositorio
     const githubUrls = {
         1: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana1',
         2: 'https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana2',
@@ -1148,6 +1148,6 @@ function openGitHub(week) {
     
     const url = githubUrls[week] || 'https://github.com/Josue2606/ProyectoTallerJosue';
     
-    // Abrir en nueva pestaña
+    console.log('Abriendo URL:', url); // Para debugging
     window.open(url, '_blank');
 }
