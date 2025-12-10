@@ -1070,696 +1070,882 @@ public static void main(String[] args) {
             `
         },
 
+// Reemplaza las semanas 9-15 con este contenido:
+
 9: {
-    title: `Semana ${week}: Avanzando en Java - Colecciones y Excepciones`,
+    title: `Semana ${week}: Diseño de la Interfaz Web`,
     body: `
         <div class="week-tabs">
             <div class="week-tab active" data-tab="presentacion">Presentación</div>
-            <div class="week-tab" data-tab="ejemplos">Ejemplos de Código</div>
+            <div class="week-tab" data-tab="ejemplos">Prototipos Figma</div>
             <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
         </div>
         
         <div id="presentacion" class="tab-content active">
-            <h3>Colecciones y Manejo de Excepciones en Java</h3>
-            <p>En esta semana exploramos estructuras de datos avanzadas y el manejo robusto de errores en aplicaciones Java.</p>
+            <h3>Diseño UX/UI del Sistema de Gestión de Tesis</h3>
+            <p>Diseño completo de la experiencia de usuario e interfaces para el sistema de gestión académica de tesis.</p>
             
-            <h3>Temas Cubiertos</h3>
+            <h3>Objetivos del Diseño</h3>
             <ul>
-                <li>Java Collections Framework (List, Set, Map)</li>
-                <li>Manejo de excepciones con try-catch-finally</li>
-                <li>Excepciones personalizadas</li>
-                <li>Stream API para procesamiento de datos</li>
+                <li>Crear una interfaz intuitiva para 4 roles diferentes (Admin, Docente, Jurado, Estudiante)</li>
+                <li>Establecer flujos de trabajo claros para el proceso de revisión de tesis</li>
+                <li>Diseñar un sistema de notificaciones efectivo</li>
+                <li>Crear dashboards específicos para cada tipo de usuario</li>
             </ul>
             
-            <h3>Aplicación en el Proyecto</h3>
+            <h3>Características del Diseño</h3>
             <ul>
-                <li>Uso de ArrayList para almacenar usuarios y transacciones</li>
-                <li>Validación de datos con excepciones personalizadas</li>
-                <li>Búsqueda y filtrado de datos con Streams</li>
+                <li>Paleta de colores institucional (azul académico)</li>
+                <li>Diseño responsivo para diferentes dispositivos</li>
+                <li>Prototipos navegables con interacciones</li>
+                <li>Wireframes de baja y alta fidelidad</li>
             </ul>
         </div>
         
         <div id="ejemplos" class="tab-content">
-            <h3>Código de la Semana 9</h3>
+            <h3>Prototipos en Figma</h3>
+            <div class="alert alert-info">
+                <i class="fas fa-external-link-alt"></i> Los prototipos completos están disponibles en Figma.
+                <br>
+                <strong>Estado del proyecto:</strong> En desarrollo - Fase de diseño inicial
+            </div>
             
-            <h4>Uso de Collections en DataStore</h4>
+            <h4>Acceso a los Prototipos</h4>
             <div class="code-container">
-                <pre><code class="language-java">// Ejemplo de uso de ArrayList en DataStore
-package modelo;
+                <pre><code class="language-markdown"># Enlace al proyecto Figma
+https://www.figma.com/file/[TU_ID_DEL_PROYECTO]/Gestión-de-Tesis-Universitarias
 
-import java.util.ArrayList;
-import java.util.List;
+# Credenciales de acceso (si aplica)
+Usuario: ejemplo@universidad.edu
+Contraseña: prototipo2024
 
-public class DataStore {
-    // Colecciones para almacenar datos
-    public static List&lt;Usuario&gt; usuarios = new ArrayList&lt;&gt;();
-    public static List&lt;Finanza&gt; ingresos = new ArrayList&lt;&gt;();
-    public static List&lt;Finanza&gt; gastos = new ArrayList&lt;&gt;();
-    
-    // Método para buscar usuario por correo
-    public static Usuario buscarUsuarioPorCorreo(String correo) {
-        return usuarios.stream()
-            .filter(u -> u.getCorreo().equals(correo))
-            .findFirst()
-            .orElse(null);
-    }
-    
-    // Método para obtener transacciones de un usuario
-    public static List&lt;Finanza&gt; obtenerTransaccionesUsuario(String correo) {
-        List&lt;Finanza&gt; todas = new ArrayList&lt;&gt;();
-        todas.addAll(ingresos);
-        todas.addAll(gastos);
-        
-        return todas.stream()
-            .filter(f -> f.getCorreoUsuario().equals(correo))
-            .collect(Collectors.toList());
-    }
-}</code></pre>
+# Estructura del proyecto Figma:
+1. Login y Autenticación
+2. Dashboard Administrativo
+3. Panel del Docente/Asesor
+4. Interfaz del Jurado
+5. Portal del Estudiante
+6. Sistema de Notificaciones
+7. Flujo de Revisión Completo</code></pre>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="https://www.figma.com/" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-figma"></i> Ver Prototipos en Figma
+                </a>
+                <p class="text-muted small mt-2">El proyecto está en desarrollo. Haz clic para ver los avances.</p>
             </div>
         </div>
         
         <div id="referencias" class="tab-content">
-            <h3>Enlaces de Referencia</h3>
-            <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Java Collections Framework
+            <h3>Recursos de Diseño UX/UI</h3>
+            <a href="https://www.figma.com/community" class="resource-link" target="_blank">
+                <i class="fab fa-figma"></i> Figma Community
             </a>
-            <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Manejo de Excepciones en Java
+            <a href="https://material.io/design" class="resource-link" target="_blank">
+                <i class="fas fa-palette"></i> Material Design
             </a>
         </div>
     `
 },
+
 10: {
-    title: `Semana ${week}: Patrones de Diseño en Java`,
+    title: `Semana ${week}: Desarrollo de Interfaces JSP`,
     body: `
         <div class="week-tabs">
             <div class="week-tab active" data-tab="presentacion">Presentación</div>
-            <div class="week-tab" data-tab="ejemplos">Ejemplos de Código</div>
+            <div class="week-tab" data-tab="ejemplos">Código JSP</div>
             <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
         </div>
         
         <div id="presentacion" class="tab-content active">
-            <h3>Implementación de Patrones de Diseño</h3>
-            <p>Aplicación de patrones de diseño comunes para mejorar la arquitectura y mantenibilidad del código.</p>
+            <h3>Implementación de Interfaces Web con JSP</h3>
+            <p>Desarrollo de las vistas JSP basadas en los diseños de Figma para cada rol del sistema.</p>
             
-            <h3>Patrones Implementados</h3>
+            <h3>Páginas Desarrolladas</h3>
             <ul>
-                <li><strong>Singleton</strong> - Para gestión única de configuración</li>
-                <li><strong>Factory Method</strong> - Creación de objetos de transacciones</li>
-                <li><strong>Observer</strong> - Notificaciones de cambios en datos</li>
-                <li><strong>DAO (Data Access Object)</strong> - Acceso a datos</li>
-            </ul>
-            
-            <h3>Beneficios Obtenidos</h3>
-            <ul>
-                <li>Código más modular y reutilizable</li>
-                <li>Fácil mantenimiento y extensión</li>
-                <li>Mejor separación de responsabilidades</li>
-                <li>Preparación para integración con bases de datos</li>
-            </ul>
-        </div>
-        
-        <div id="ejemplos" class="tab-content">
-            <h3>Código de la Semana 10</h3>
-            
-            <h4>Patrón Singleton para Configuración</h4>
-            <div class="code-container">
-                <pre><code class="language-java">// Ejemplo de patrón Singleton
-package util;
-
-public class Configuracion {
-    private static Configuracion instancia;
-    private String rutaBaseDatos;
-    private String moneda;
-    
-    private Configuracion() {
-        // Configuración por defecto
-        this.rutaBaseDatos = "jdbc:mysql://localhost:3306/finanzas_personales";
-        this.moneda = "S/";
-    }
-    
-    public static Configuracion getInstancia() {
-        if (instancia == null) {
-            instancia = new Configuracion();
-        }
-        return instancia;
-    }
-    
-    // Getters y Setters
-    public String getRutaBaseDatos() { return rutaBaseDatos; }
-    public String getMoneda() { return moneda; }
-    
-    public void setMoneda(String moneda) { this.moneda = moneda; }
-}</code></pre>
-            </div>
-            
-            <h4>Patrón Factory para Transacciones</h4>
-            <div class="code-container">
-                <pre><code class="language-java">// Factory Method para crear transacciones
-package modelo.factory;
-
-import modelo.Finanza;
-import java.util.Date;
-
-public class FinanzaFactory {
-    public static Finanza crearIngreso(Date fecha, double monto, 
-                                       String categoria, String descripcion, 
-                                       String correoUsuario) {
-        return new Finanza("Ingreso", fecha, monto, categoria, 
-                          descripcion, correoUsuario);
-    }
-    
-    public static Finanza crearGasto(Date fecha, double monto, 
-                                     String categoria, String descripcion, 
-                                     String correoUsuario) {
-        return new Finanza("Gasto", fecha, monto, categoria, 
-                          descripcion, correoUsuario);
-    }
-}</code></pre>
-            </div>
-        </div>
-        
-        <div id="referencias" class="tab-content">
-            <h3>Enlaces de Referencia</h3>
-            <a href="https://refactoring.guru/design-patterns" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Refactoring Guru - Patrones de Diseño
-            </a>
-            <a href="https://java-design-patterns.com/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Java Design Patterns
-            </a>
-        </div>
-    `
-},
-11: {
-    title: `Semana ${week}: Conexión a Base de Datos con JDBC`,
-    body: `
-        <div class="week-tabs">
-            <div class="week-tab active" data-tab="presentacion">Presentación</div>
-            <div class="week-tab" data-tab="ejemplos">Código JDBC</div>
-            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
-        </div>
-        
-        <div id="presentacion" class="tab-content active">
-            <h3>Conexión Java-MySQL con JDBC</h3>
-            <p>Implementación de la capa de acceso a datos para conectar la aplicación Java con la base de datos MySQL.</p>
-            
-            <h3>Componentes Implementados</h3>
-            <ul>
-                <li>Conexión a base de datos MySQL</li>
-                <li>Operaciones CRUD (Create, Read, Update, Delete)</li>
-                <li>Manejo de transacciones</li>
-                <li>Cierre adecuado de recursos</li>
+                <li><strong>login.jsp</strong> - Autenticación de usuarios</li>
+                <li><strong>admin.jsp</strong> - Panel de administración completo</li>
+                <li><strong>docente.jsp</strong> - Interfaz para docentes (asesores y jurados)</li>
+                <li><strong>alumno.jsp</strong> - Portal para estudiantes</li>
             </ul>
             
             <h3>Tecnologías Utilizadas</h3>
             <ul>
-                <li>JDBC (Java Database Connectivity)</li>
-                <li>MySQL Connector/J 8.0</li>
-                <li>Prepared Statements para seguridad</li>
-                <li>Pool de conexiones</li>
+                <li>JSP (JavaServer Pages) con JSTL</li>
+                <li>Bootstrap 5 para diseño responsivo</li>
+                <li>JavaScript para interactividad</li>
+                <li>AJAX para actualizaciones dinámicas</li>
             </ul>
         </div>
         
         <div id="ejemplos" class="tab-content">
-            <h3>Código de Conexión JDBC</h3>
+            <h3>Implementación de Vistas JSP</h3>
             
-            <h4>Conexión a Base de Datos</h4>
+            <h4>Estructura de Archivos en GitHub</h4>
             <div class="code-container">
-                <pre><code class="language-java">// Clase para manejar la conexión a la base de datos
-package database;
+                <pre><code class="language-markdown">ProyectoTallerJosue/
+└── FinalProyecto-1.0-SNAPSHOT/
+    └── Web Pages/
+        ├── admin.jsp            # Panel administrativo
+        ├── alumno.jsp           # Portal estudiante
+        ├── docente.jsp          # Panel docente/jurado
+        └── login.jsp            # Página de autenticación</code></pre>
+            </div>
+            
+            <h4>Ejemplo de login.jsp</h4>
+            <div class="code-container">
+                <pre><code class="language-jsp">&lt;%@page contentType="text/html" pageEncoding="UTF-8"%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Acceso Institucional - Gestión de Tesis&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row justify-content-center mt-5"&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;div class="card shadow"&gt;
+                    &lt;div class="card-body"&gt;
+                        &lt;h3 class="text-center mb-4"&gt;&lt;i class="bi bi-mortarboard"&gt;&lt;/i&gt; Sistema de Tesis&lt;/h3&gt;
+                        
+                        &lt;% if (request.getParameter("error") != null) { %&gt;
+                            &lt;div class="alert alert-danger"&gt;
+                                &lt;%= request.getParameter("error") %&gt;
+                            &lt;/div&gt;
+                        &lt;% } %&gt;
+                        
+                        &lt;form action="LoginServlet" method="POST"&gt;
+                            &lt;div class="mb-3"&gt;
+                                &lt;input type="text" name="loginId" class="form-control" 
+                                       placeholder="Código / DNI / Email" required&gt;
+                            &lt;/div&gt;
+                            &lt;div class="mb-3"&gt;
+                                &lt;input type="password" name="loginPassword" class="form-control" 
+                                       placeholder="Contraseña" required&gt;
+                            &lt;/div&gt;
+                            &lt;button type="submit" class="btn btn-primary w-100"&gt;
+                                Ingresar
+                            &lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            
+            <h4>Vista en GitHub</h4>
+            <div class="text-center mt-4">
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/FinalProyecto-1.0-SNAPSHOT/Web%20Pages" 
+                   target="_blank" class="btn btn-success">
+                    <i class="fab fa-github"></i> Ver Interfaces JSP en GitHub
+                </a>
+                <p class="text-muted small mt-2">Revisa el código completo de todas las vistas</p>
+            </div>
+        </div>
+        
+        <div id="referencias" class="tab-content">
+            <h3>Recursos JSP y Bootstrap</h3>
+            <a href="https://docs.oracle.com/javaee/5/tutorial/doc/bnagx.html" class="resource-link" target="_blank">
+                <i class="fas fa-book"></i> Oracle JSP Tutorial
+            </a>
+            <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" class="resource-link" target="_blank">
+                <i class="fab fa-bootstrap"></i> Bootstrap 5 Documentation
+            </a>
+        </div>
+    `
+},
+
+11: {
+    title: `Semana ${week}: Modelos de Datos Java`,
+    body: `
+        <div class="week-tabs">
+            <div class="week-tab active" data-tab="presentacion">Presentación</div>
+            <div class="week-tab" data-tab="ejemplos">Modelos Java</div>
+            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
+        </div>
+        
+        <div id="presentacion" class="tab-content active">
+            <h3>Modelado de Entidades del Sistema</h3>
+            <p>Implementación de las clases modelo que representan las entidades principales del sistema de gestión de tesis.</p>
+            
+            <h3>Entidades Principales</h3>
+            <ul>
+                <li><strong>Usuario</strong> - Clase base para autenticación</li>
+                <li><strong>Admin</strong> - Administrador del sistema</li>
+                <li><strong>Docente</strong> - Asesor o miembro de jurado</li>
+                <li><strong>Alumno</strong> - Estudiante con proyecto de tesis</li>
+                <li><strong>Tesis</strong> - Proyecto de investigación</li>
+                <li><strong>HistorialRevision</strong> - Seguimiento de versiones</li>
+                <li><strong>Notificacion</strong> - Sistema de alertas</li>
+            </ul>
+            
+            <h3>Características de los Modelos</h3>
+            <ul>
+                <li>JavaBeans (POJOs) con getters y setters</li>
+                <li>Mapeo 1:1 con tablas de base de datos</li>
+                <li>Validación de datos básica</li>
+                <li>Relaciones entre entidades</li>
+            </ul>
+        </div>
+        
+        <div id="ejemplos" class="tab-content">
+            <h3>Implementación de Modelos</h3>
+            
+            <h4>Estructura de Paquetes</h4>
+            <div class="code-container">
+                <pre><code class="language-markdown">src/
+└── com.gestortes.modelo/
+    ├── Admin.java
+    ├── Alumno.java
+    ├── Docente.java
+    ├── HistorialRevision.java
+    ├── Notificacion.java
+    ├── Tesis.java
+    └── Usuario.java</code></pre>
+            </div>
+            
+            <h4>Ejemplo: Modelo Tesis</h4>
+            <div class="code-container">
+                <pre><code class="language-java">package com.gestortes.modelo;
+
+import java.sql.Timestamp;
+import java.sql.Date;
+
+public class Tesis {
+    private int id;
+    private String titulo;
+    private String descripcion;
+    private String archivoActualUrl;
+    private String estado;
+    private Timestamp fechaUltimaModificacion;
+    private Date fechaLimite;
+    
+    private String nombreAlumno;
+    private String nombreDocente;
+    private int alumnoId;
+    private int docenteId;
+
+    // Constructores
+    public Tesis() {}
+
+    // Getters y Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
+
+    public Date getFechaLimite() { return fechaLimite; }
+    public void setFechaLimite(Date fechaLimite) { this.fechaLimite = fechaLimite; }
+
+    // ... más getters y setters
+}</code></pre>
+            </div>
+            
+            <h4>Ejemplo: Modelo HistorialRevision</h4>
+            <div class="code-container">
+                <pre><code class="language-java">package com.gestortes.modelo;
+
+import java.sql.Timestamp;
+
+public class HistorialRevision {
+    private int id;
+    private int tesisId;
+    private int numeroVersion;
+    private String archivoUrl;
+    private String comentariosDocente;
+    private String estadoVersion;
+    private Timestamp fechaSubida;
+    private double puntajeTotal;
+    private String detalleRubrica;
+
+    // Getters y Setters para rúbrica
+    public double getPuntajeTotal() { return puntajeTotal; }
+    public void setPuntajeTotal(double puntajeTotal) { this.puntajeTotal = puntajeTotal; }
+    
+    public String getDetalleRubrica() { return detalleRubrica; }
+    public void setDetalleRubrica(String detalleRubrica) { this.detalleRubrica = detalleRubrica; }
+}</code></pre>
+            </div>
+            
+            <h4>Acceso a GitHub</h4>
+            <div class="text-center mt-4">
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/FinalProyecto-1.0-SNAPSHOT/src/java/com/gestortes/modelo" 
+                   target="_blank" class="btn btn-success">
+                    <i class="fab fa-github"></i> Ver Modelos en GitHub
+                </a>
+            </div>
+        </div>
+        
+        <div id="referencias" class="tab-content">
+            <h3>Recursos de Modelado</h3>
+            <a href="https://www.oracle.com/java/technologies/javase/javabeans-spec.html" class="resource-link" target="_blank">
+                <i class="fas fa-coffee"></i> JavaBeans Specification
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Plain_old_Java_object" class="resource-link" target="_blank">
+                <i class="fas fa-cube"></i> POJO Pattern
+            </a>
+        </div>
+    `
+},
+
+12: {
+    title: `Semana ${week}: Controladores y Servlets`,
+    body: `
+        <div class="week-tabs">
+            <div class="week-tab active" data-tab="presentacion">Presentación</div>
+            <div class="week-tab" data-tab="ejemplos">Servlets Java</div>
+            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
+        </div>
+        
+        <div id="presentacion" class="tab-content active">
+            <h3>Lógica de Control con Servlets</h3>
+            <p>Implementación de la capa de controladores que maneja las peticiones HTTP y coordina el flujo de la aplicación.</p>
+            
+            <h3>Servlets Implementados</h3>
+            <ul>
+                <li><strong>LoginServlet</strong> - Autenticación y recuperación de contraseña</li>
+                <li><strong>AdminController</strong> - Gestión completa del administrador</li>
+                <li><strong>DocenteController</strong> - Evaluaciones y revisiones</li>
+                <li><strong>AlumnoController</strong> - Subida de archivos y seguimiento</li>
+                <li><strong>DescargaServlet</strong> - Gestión de descargas seguras</li>
+                <li><strong>LogoutServlet</strong> - Cierre de sesión</li>
+            </ul>
+            
+            <h3>Características</h3>
+            <ul>
+                <li>Manejo de sesiones HTTP</li>
+                <li>Validación de roles y permisos</li>
+                <li>Upload de archivos PDF</li>
+                <li>Comunicación AJAX para actualizaciones dinámicas</li>
+            </ul>
+        </div>
+        
+        <div id="ejemplos" class="tab-content">
+            <h3>Implementación de Servlets</h3>
+            
+            <h4>Estructura de Controladores</h4>
+            <div class="code-container">
+                <pre><code class="language-markdown">src/
+└── com.gestortes.servlets/
+    ├── AdminController.java      # CRUD completo
+    ├── AlumnoController.java     # Gestión estudiante
+    ├── DescargaServlet.java      # Descarga archivos
+    ├── DocenteController.java    # Evaluación tesis
+    ├── LoginServlet.java         # Autenticación
+    └── LogoutServlet.java        # Cierre sesión</code></pre>
+            </div>
+            
+            <h4>Ejemplo: LoginServlet</h4>
+            <div class="code-container">
+                <pre><code class="language-java">package com.gestortes.servlets;
+
+import com.gestortes.dao.UsuarioDAO;
+import com.gestortes.modelo.Usuario;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import java.io.IOException;
+
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+    
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        
+        String loginId = request.getParameter("loginId");
+        String loginPass = request.getParameter("loginPassword");
+        
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        Usuario usuario = usuarioDAO.validarUsuario(loginId, loginPass);
+
+        if (usuario != null) {
+            HttpSession session = request.getSession(true);
+            session.setAttribute("usuarioId", usuario.getId());
+            session.setAttribute("nombre", usuario.getNombre());
+            session.setAttribute("rol", usuario.getRol());
+            
+            // Redirigir según rol
+            switch (usuario.getRol()) {
+                case "admin": response.sendRedirect("AdminController"); break;
+                case "docente": response.sendRedirect("DocenteController"); break;
+                case "estudiante": response.sendRedirect("AlumnoController"); break;
+            }
+        } else {
+            response.sendRedirect("login.jsp?error=Credenciales incorrectas");
+        }
+    }
+}</code></pre>
+            </div>
+            
+            <h4>Ejemplo: AdminController (Manejo de archivos)</h4>
+            <div class="code-container">
+                <pre><code class="language-java">@WebServlet("/AdminController")
+@MultipartConfig(
+    fileSizeThreshold = 1024 * 1024 * 2,
+    maxFileSize = 1024 * 1024 * 50,
+    maxRequestSize = 1024 * 1024 * 100
+)
+public class AdminController extends HttpServlet {
+    
+    private static final String UPLOAD_DIR = "C:\\arred";
+    
+    private String guardarArchivo(Part filePart) throws IOException {
+        if (filePart != null && filePart.getSize() > 0) {
+            String fileName = System.currentTimeMillis() + "_" + 
+                Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
+            filePart.write(UPLOAD_DIR + File.separator + fileName);
+            return fileName;
+        }
+        return null;
+    }
+}</code></pre>
+            </div>
+            
+            <h4>Acceso a GitHub</h4>
+            <div class="text-center mt-4">
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/FinalProyecto-1.0-SNAPSHOT/src/java/com/gestortes/servlets" 
+                   target="_blank" class="btn btn-success">
+                    <i class="fab fa-github"></i> Ver Servlets en GitHub
+                </a>
+            </div>
+        </div>
+        
+        <div id="referencias" class="tab-content">
+            <h3>Recursos Servlet</h3>
+            <a href="https://jakarta.ee/specifications/servlet/" class="resource-link" target="_blank">
+                <i class="fas fa-server"></i> Jakarta Servlet Specification
+            </a>
+        </div>
+    `
+},
+
+13: {
+    title: `Semana ${week}: Base de Datos MySQL`,
+    body: `
+        <div class="week-tabs">
+            <div class="week-tab active" data-tab="presentacion">Presentación</div>
+            <div class="week-tab" data-tab="ejemplos">SQL y Conexión</div>
+            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
+        </div>
+        
+        <div id="presentacion" class="tab-content active">
+            <h3>Base de Datos y Conexión JDBC</h3>
+            <p>Diseño e implementación de la base de datos MySQL y la capa de conexión JDBC para el sistema de gestión de tesis.</p>
+            
+            <h3>Componentes de Base de Datos</h3>
+            <ul>
+                <li><strong>MySQL Workbench</strong> - Diseño del modelo entidad-relación</li>
+                <li><strong>Scripts SQL</strong> - Creación de tablas y datos iniciales</li>
+                <li><strong>ConexionDB.java</strong> - Clase de utilidad para conexiones JDBC</li>
+                <li><strong>Vistas SQL</strong> - Para consultas complejas (vista_login_usuarios)</li>
+            </ul>
+            
+            <h3>Tablas Principales</h3>
+            <ul>
+                <li>administradores, docentes, alumnos</li>
+                <li>tesis (proyectos de investigación)</li>
+                <li>historial_revisiones (seguimiento de versiones)</li>
+                <li>notificaciones (sistema de alertas)</li>
+            </ul>
+        </div>
+        
+        <div id="ejemplos" class="tab-content">
+            <h3>Implementación de Base de Datos</h3>
+            
+            <h4>Conexión JDBC</h4>
+            <div class="code-container">
+                <pre><code class="language-java">package com.gestortes.conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexionBD {
-    private static final String URL = "jdbc:mysql://localhost:3306/finanzas_personales";
-    private static final String USER = "root";
-    private static final String PASSWORD = "";
-    private static Connection conexion;
-    
-    public static Connection getConexion() throws SQLException {
-        if (conexion == null || conexion.isClosed()) {
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                conexion = DriverManager.getConnection(URL, USER, PASSWORD);
-                System.out.println("Conexión establecida con éxito");
-            } catch (ClassNotFoundException e) {
-                throw new SQLException("Driver MySQL no encontrado", e);
-            }
-        }
-        return conexion;
-    }
-    
-    public static void cerrarConexion() {
-        if (conexion != null) {
-            try {
-                conexion.close();
-                System.out.println("Conexión cerrada");
-            } catch (SQLException e) {
-                System.err.println("Error al cerrar conexión: " + e.getMessage());
-            }
-        }
-    }
-}</code></pre>
-            </div>
-            
-            <h4>DAO para Usuarios</h4>
-            <div class="code-container">
-                <pre><code class="language-java">// Data Access Object para operaciones de usuario
-package database.dao;
+public class ConexionDB {
+    private static final String JDBC_URL = 
+        "jdbc:mysql://localhost:3306/gestion_tesis_db?useSSL=false&serverTimezone=UTC";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASS = "admin";
+    private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 
-import modelo.Usuario;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
-public class UsuarioDAO {
-    
-    public Usuario autenticar(String correo, String contrasena) throws SQLException {
-        String sql = "SELECT id, nombre, apellido, correo FROM usuarios " +
-                    "WHERE correo = ? AND contrasena = ?";
-        
-        try (Connection conn = ConexionBD.getConexion();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            
-            pstmt.setString(1, correo);
-            pstmt.setString(2, contrasena);
-            
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) {
-                    return new Usuario(
-                        rs.getString("nombre"),
-                        rs.getString("apellido"),
-                        rs.getString("correo"),
-                        contrasena
-                    );
-                }
-            }
-        }
-        return null;
-    }
-    
-    public boolean registrarUsuario(Usuario usuario) throws SQLException {
-        String sql = "INSERT INTO usuarios (nombre, apellido, correo, contrasena) " +
-                    "VALUES (?, ?, ?, ?)";
-        
-        try (Connection conn = ConexionBD.getConexion();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            
-            pstmt.setString(1, usuario.getNombre());
-            pstmt.setString(2, usuario.getApellido());
-            pstmt.setString(3, usuario.getCorreo());
-            pstmt.setString(4, usuario.getContrasena());
-            
-            return pstmt.executeUpdate() > 0;
-        }
-    }
-}</code></pre>
-            </div>
-        </div>
-        
-        <div id="referencias" class="tab-content">
-            <h3>Enlaces de Referencia</h3>
-            <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Documentación JDBC
-            </a>
-            <a href="https://dev.mysql.com/doc/connector-j/8.0/en/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> MySQL Connector/J
-            </a>
-        </div>
-    `
-},
-12: {
-    title: `Semana ${week}: Pruebas Unitarias y Debugging`,
-    body: `
-        <div class="week-tabs">
-            <div class="week-tab active" data-tab="presentacion">Presentación</div>
-            <div class="week-tab" data-tab="ejemplos">Pruebas Unitarias</div>
-            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
-        </div>
-        
-        <div id="presentacion" class="tab-content active">
-            <h3>Pruebas y Depuración de Código</h3>
-            <p>Implementación de pruebas unitarias y técnicas de debugging para garantizar la calidad del software.</p>
-            
-            <h3>Técnicas Aplicadas</h3>
-            <ul>
-                <li>Pruebas unitarias con JUnit</li>
-                <li>Debugging con breakpoints</li>
-                <li>Logging para seguimiento de ejecución</li>
-                <li>Pruebas de integración</li>
-            </ul>
-            
-            <h3>Casos de Prueba Implementados</h3>
-            <ul>
-                <li>Autenticación de usuarios</li>
-                <li>Registro de transacciones</li>
-                <li>Cálculos financieros</li>
-                <li>Validación de datos de entrada</li>
-            </ul>
-        </div>
-        
-        <div id="ejemplos" class="tab-content">
-            <h3>Pruebas Unitarias con JUnit</h3>
-            
-            <h4>Prueba de Autenticación</h4>
-            <div class="code-container">
-                <pre><code class="language-java">// Prueba unitaria para autenticación
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-import modelo.Usuario;
-import modelo.DataStore;
-
-public class AutenticacionTest {
-    
-    @Test
-    public void testAutenticacionExitosa() {
-        // Preparación
-        Usuario usuario = new Usuario("Juan", "Pérez", "juan@test.com", "12345");
-        DataStore.usuarios.add(usuario);
-        
-        // Ejecución
-        boolean resultado = autenticar("juan@test.com", "12345");
-        
-        // Verificación
-        assertTrue(resultado, "La autenticación debería ser exitosa");
-    }
-    
-    @Test
-    public void testAutenticacionFallida() {
-        // Preparación
-        Usuario usuario = new Usuario("Juan", "Pérez", "juan@test.com", "12345");
-        DataStore.usuarios.add(usuario);
-        
-        // Ejecución
-        boolean resultado = autenticar("juan@test.com", "contrasena_incorrecta");
-        
-        // Verificación
-        assertFalse(resultado, "La autenticación debería fallar");
-    }
-    
-    private boolean autenticar(String correo, String contrasena) {
-        return DataStore.usuarios.stream()
-            .anyMatch(u -> u.getCorreo().equals(correo) && 
-                          u.getContrasena().equals(contrasena));
-    }
-}</code></pre>
-            </div>
-        </div>
-        
-        <div id="referencias" class="tab-content">
-            <h3>Enlaces de Referencia</h3>
-            <a href="https://junit.org/junit5/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> JUnit 5
-            </a>
-            <a href="https://www.eclipse.org/community/eclipse_newsletter/2017/june/article1.php" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Debugging en Eclipse/NetBeans
-            </a>
-        </div>
-    `
-},
-13: {
-    title: `Semana ${week}: Documentación del Proyecto`,
-    body: `
-        <div class="week-tabs">
-            <div class="week-tab active" data-tab="presentacion">Presentación</div>
-            <div class="week-tab" data-tab="ejemplos">Documentación</div>
-            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
-        </div>
-        
-        <div id="presentacion" class="tab-content active">
-            <h3>Documentación Técnica del Proyecto</h3>
-            <p>Creación de documentación completa para el proyecto de gestión financiera.</p>
-            
-            <h3>Documentos Generados</h3>
-            <ul>
-                <li>Manual de usuario</li>
-                <li>Documentación técnica</li>
-                <li>Diagramas UML</li>
-                <li>Guía de instalación y configuración</li>
-            </ul>
-            
-            <h3>Diagramas UML Incluidos</h3>
-            <ul>
-                <li>Diagrama de casos de uso</li>
-                <li>Diagrama de clases</li>
-                <li>Diagrama de secuencia</li>
-                <li>Diagrama de base de datos</li>
-            </ul>
-        </div>
-        
-        <div id="ejemplos" class="tab-content">
-            <h3>Documentación del Proyecto</h3>
-            
-            <h4>Estructura de Documentación</h4>
-            <div class="code-container">
-                <pre><code>Proyecto-Finanzas/
-├── docs/
-│   ├── Manual-Usuario.pdf
-│   ├── Documentacion-Tecnica.md
-│   ├── Guia-Instalacion.md
-│   └── diagramas/
-│       ├── CasosUso.png
-│       ├── DiagramaClases.png
-│       └── DiagramaBD.png
-├── src/
-├── test/
-└── README.md</code></pre>
-            </div>
-            
-            <h4>Ejemplo de README.md</h4>
-            <div class="code-container">
-                <pre><code># Sistema de Gestión Financiera Personal
-
-## Descripción
-Aplicación Java Swing para la gestión de finanzas personales desarrollada en NetBeans.
-
-## Características
-- Registro y autenticación de usuarios
-- Gestión de ingresos y gastos
-- Reportes financieros
-- Resumen de saldos
-
-## Requisitos
-- Java JDK 8 o superior
-- NetBeans IDE
-- MySQL 8.0
-
-## Instalación
-1. Clonar el repositorio
-2. Importar proyecto en NetBeans
-3. Configurar base de datos MySQL
-4. Ejecutar script de base de datos
-5. Ejecutar la aplicación
-
-## Uso
-1. Registrarse como nuevo usuario
-2. Iniciar sesión
-3. Registrar transacciones
-4. Visualizar reportes</code></pre>
-            </div>
-        </div>
-        
-        <div id="referencias" class="tab-content">
-            <h3>Enlaces de Referencia</h3>
-            <a href="https://www.uml.org/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> UML Official Site
-            </a>
-            <a href="https://www.markdownguide.org/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Markdown Guide
-            </a>
-        </div>
-    `
-},
-14: {
-    title: `Semana ${week}: Optimización y Mejoras`,
-    body: `
-        <div class="week-tabs">
-            <div class="week-tab active" data-tab="presentacion">Presentación</div>
-            <div class="week-tab" data-tab="ejemplos">Optimizaciones</div>
-            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
-        </div>
-        
-        <div id="presentacion" class="tab-content active">
-            <h3>Optimización del Código y Mejoras</h3>
-            <p>Refactorización y optimización del código para mejorar el rendimiento y mantenibilidad.</p>
-            
-            <h3>Mejoras Implementadas</h3>
-            <ul>
-                <li>Refactorización de código duplicado</li>
-                <li>Optimización de consultas a base de datos</li>
-                <li>Mejora en la interfaz de usuario</li>
-                <li>Implementación de caché</li>
-            </ul>
-            
-            <h3>Resultados Obtenidos</h3>
-            <ul>
-                <li>Reducción del 30% en tiempo de respuesta</li>
-                <li>Código más limpio y mantenible</li>
-                <li>Mejor experiencia de usuario</li>
-                <li>Menor consumo de recursos</li>
-            </ul>
-        </div>
-        
-        <div id="ejemplos" class="tab-content">
-            <h3>Código Optimizado</h3>
-            
-            <h4>Refactorización de Métodos</h4>
-            <div class="code-container">
-                <pre><code class="language-java">// ANTES: Código duplicado
-public void calcularResumenUsuario(String correo) {
-    double totalIngresos = 0;
-    for (Finanza f : DataStore.ingresos) {
-        if (f.getCorreoUsuario().equals(correo)) {
-            totalIngresos += f.getMonto();
-        }
-    }
-    
-    double totalGastos = 0;
-    for (Finanza f : DataStore.gastos) {
-        if (f.getCorreoUsuario().equals(correo)) {
-            totalGastos += f.getMonto();
-        }
-    }
-}
-
-// DESPUÉS: Código refactorizado
-public ResumenFinanciero calcularResumenUsuario(String correo) {
-    double totalIngresos = calcularTotalPorTipo(correo, "Ingreso");
-    double totalGastos = calcularTotalPorTipo(correo, "Gasto");
-    double saldo = totalIngresos - totalGastos;
-    
-    return new ResumenFinanciero(totalIngresos, totalGastos, saldo);
-}
-
-private double calcularTotalPorTipo(String correo, String tipo) {
-    List&lt;Finanza&gt; transacciones = tipo.equals("Ingreso") ? 
-        DataStore.ingresos : DataStore.gastos;
-    
-    return transacciones.stream()
-        .filter(f -> f.getCorreoUsuario().equals(correo))
-        .mapToDouble(Finanza::getMonto)
-        .sum();
-}</code></pre>
-            </div>
-        </div>
-        
-        <div id="referencias" class="tab-content">
-            <h3>Enlaces de Referencia</h3>
-            <a href="https://refactoring.com/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Refactoring.com
-            </a>
-            <a href="https://www.baeldung.com/java-performance" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Java Performance Optimization
-            </a>
-        </div>
-    `
-},
-15: {
-    title: `Semana ${week}: Proyecto Final y Presentación`,
-    body: `
-        <div class="week-tabs">
-            <div class="week-tab active" data-tab="presentacion">Presentación</div>
-            <div class="week-tab" data-tab="ejemplos">Proyecto Final</div>
-            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
-        </div>
-        
-        <div id="presentacion" class="tab-content active">
-            <h3>Proyecto Final Integrador</h3>
-            <p>Integración de todos los módulos y presentación del proyecto completo de gestión financiera.</p>
-            
-            <h3>Componentes del Proyecto Final</h3>
-            <ul>
-                <li>Aplicación Java Swing completa</li>
-                <li>Base de datos MySQL funcional</li>
-                <li>Documentación técnica completa</li>
-                <li>Pruebas unitarias implementadas</li>
-                <li>Presentación ejecutable</li>
-            </ul>
-            
-            <h3>Características Finales</h3>
-            <ul>
-                <li>Interfaz de usuario intuitiva</li>
-                <li>Conexión estable a base de datos</li>
-                <li>Validación completa de datos</li>
-                <li>Reportes y gráficos financieros</li>
-                <li>Sistema de backup y recuperación</li>
-            </ul>
-        </div>
-        
-        <div id="ejemplos" class="tab-content">
-            <h3>Proyecto Final Integrado</h3>
-            
-            <h4>Estructura del Proyecto Final</h4>
-            <div class="code-container">
-                <pre><code>ProyectoTallerJosue/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── modelo/
-│   │   │   │   ├── Usuario.java
-│   │   │   │   ├── Finanza.java
-│   │   │   │   └── DataStore.java
-│   │   │   ├── vista/
-│   │   │   │   ├── LoginFrame.java
-│   │   │   │   ├── InicioFrame.java
-│   │   │   │   └── ...
-│   │   │   ├── controlador/
-│   │   │   ├── database/
-│   │   │   └── util/
-│   │   └── resources/
-│   └── test/
-│       └── java/
-├── docs/
-├── scripts/
-│   └── database.sql
-├── lib/
-│   └── mysql-connector-java-8.0.xx.jar
-├── README.md
-└── build.gradle</code></pre>
-            </div>
-            
-            <h4>Main Principal del Proyecto</h4>
-            <div class="code-container">
-                <pre><code class="language-java">// Punto de entrada principal del proyecto
-package main;
-
-import vista.LoginFrame;
-import javax.swing.*;
-
-public class MainApp {
-    public static void main(String[] args) {
-        // Establecer Look and Feel
+    public static Connection getConnection() throws SQLException {
         try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            System.err.println("Error al establecer Look and Feel: " + e.getMessage());
+            Class.forName(JDBC_DRIVER);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("Error al cargar el driver", e);
         }
-        
-        // Iniciar aplicación
-        SwingUtilities.invokeLater(() -> {
-            LoginFrame loginFrame = new LoginFrame();
-            loginFrame.setVisible(true);
-            loginFrame.setLocationRelativeTo(null);
-            
-            System.out.println("Aplicación de Gestión Financiera iniciada");
-            System.out.println("Versión: 1.0.0");
-            System.out.println("Desarrollador: Josue Anthony Arredondo Condor");
-            System.out.println("Universidad: UPLA - Taller VII");
-        });
+        return DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASS);
     }
 }</code></pre>
+            </div>
+            
+            <h4>Ejemplo de Script SQL</h4>
+            <div class="code-container">
+                <pre><code class="language-sql">-- Creación de la base de datos
+CREATE DATABASE IF NOT EXISTS gestion_tesis_db;
+USE gestion_tesis_db;
+
+-- Tabla de administradores
+CREATE TABLE administradores (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+
+-- Tabla de tesis con rúbrica
+CREATE TABLE tesis (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(200) NOT NULL,
+    alumno_id INT NOT NULL,
+    docente_id INT NOT NULL,
+    estado ENUM('Asignado', 'En Revisión', 'Observado', 'Aprobado', 'Rechazado'),
+    fecha_limite DATE,
+    archivo_actual_url VARCHAR(255),
+    FOREIGN KEY (alumno_id) REFERENCES alumnos(id),
+    FOREIGN KEY (docente_id) REFERENCES docentes(id)
+);
+
+-- Vista para login unificado
+CREATE VIEW vista_login_usuarios AS
+SELECT id, nombre, email, 'admin' as rol, email as codigo_usuario, password 
+FROM administradores
+UNION
+SELECT id, nombre, email, 'docente' as rol, dni as codigo_usuario, password 
+FROM docentes
+UNION
+SELECT id, nombre, email, 'estudiante' as rol, codigo as codigo_usuario, password 
+FROM alumnos;</code></pre>
+            </div>
+            
+            <h4>Acceso a GitHub</h4>
+            <div class="text-center mt-4">
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/FinalProyecto-1.0-SNAPSHOT/src/java/com/gestortes/conexion" 
+                   target="_blank" class="btn btn-success">
+                    <i class="fab fa-github"></i> Ver Conexión JDBC en GitHub
+                </a>
+                <p class="text-muted small mt-2">Incluye scripts SQL completos</p>
             </div>
         </div>
         
         <div id="referencias" class="tab-content">
-            <h3>Enlaces de Referencia</h3>
-            <a href="https://github.com/Josue2606/ProyectoTallerJosue" class="resource-link" target="_blank">
-                <i class="fab fa-github"></i> Repositorio del Proyecto
+            <h3>Recursos MySQL y JDBC</h3>
+            <a href="https://dev.mysql.com/doc/" class="resource-link" target="_blank">
+                <i class="fas fa-database"></i> MySQL Documentation
             </a>
-            <a href="https://docs.oracle.com/javase/tutorial/uiswing/" class="resource-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Java Swing Tutorial
+            <a href="https://docs.oracle.com/javase/tutorial/jdbc/" class="resource-link" target="_blank">
+                <i class="fas fa-plug"></i> JDBC Tutorial
+            </a>
+        </div>
+    `
+},
+
+14: {
+    title: `Semana ${week}: Sistema de Reportes y Análisis`,
+    body: `
+        <div class="week-tabs">
+            <div class="week-tab active" data-tab="presentacion">Presentación</div>
+            <div class="week-tab" data-tab="ejemplos">Reportes</div>
+            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
+        </div>
+        
+        <div id="presentacion" class="tab-content active">
+            <h3>Reportes y Análisis del Sistema</h3>
+            <p>Implementación de funcionalidades de reporting y análisis de datos para la toma de decisiones académicas.</p>
+            
+            <h3>Tipos de Reportes Implementados</h3>
+            <ul>
+                <li><strong>Reportes Administrativos</strong> - Estadísticas generales del sistema</li>
+                <li><strong>Reportes por Docente</strong> - Carga lectiva y desempeño</li>
+                <li><strong>Reportes de Tesis</strong> - Estados, tiempos de revisión, aprobaciones</li>
+                <li><strong>Actas de Evaluación</strong> - Documentos formales para impresión</li>
+                <li><strong>Exportación a Excel/CSV</strong> - Para análisis externo</li>
+            </ul>
+            
+            <h3>Métricas Clave</h3>
+            <ul>
+                <li>Tasa de aprobación por docente/área</li>
+                <li>Tiempo promedio de revisión</li>
+                <li>Distribución de estados de tesis</li>
+                <li>Seguimiento de plazos y fechas límite</li>
+            </ul>
+        </div>
+        
+        <div id="ejemplos" class="tab-content">
+            <h3>Implementación de Reportes</h3>
+            
+            <h4>Dashboard Administrativo</h4>
+            <div class="code-container">
+                <pre><code class="language-java">// En AdminController.java - Método de estadísticas
+private void cargarListas(HttpServletRequest request, HttpServletResponse response) {
+    List<Tesis> listaTesis = new TesisDAO().listarTesisView();
+    
+    // Cálculo de estadísticas
+    double total = listaTesis.size();
+    long countAprobados = listaTesis.stream()
+        .filter(t -> "Aprobado".equalsIgnoreCase(t.getEstado()))
+        .count();
+    
+    long countObservados = listaTesis.stream()
+        .filter(t -> "Observado".equalsIgnoreCase(t.getEstado()))
+        .count();
+    
+    int pctAprob = (total > 0) ? (int)((countAprobados / total) * 100) : 0;
+    int pctObs = (total > 0) ? (int)((countObservados / total) * 100) : 0;
+    
+    // Pasar estadísticas a la vista
+    request.setAttribute("statsTotalTesis", (int)total);
+    request.setAttribute("statsAprobados", countAprobados);
+    request.setAttribute("pctAprob", pctAprob);
+    request.setAttribute("pctObs", pctObs);
+}</code></pre>
+            </div>
+            
+            <h4>Exportación a CSV/Excel</h4>
+            <div class="code-container">
+                <pre><code class="language-javascript">// En admin.jsp - Exportación JavaScript
+function exportTableToCSV(tableId, filename) {
+    const table = document.getElementById(tableId);
+    const rows = table.querySelectorAll('tr');
+    let csvContent = [];
+    
+    rows.forEach(row => {
+        const cols = row.querySelectorAll('td, th');
+        let rowData = [];
+        cols.forEach((col, index) => {
+            if (index < cols.length - 1) { // Ignorar columna acciones
+                let text = col.innerText.replace(/(\r\n|\n|\r)/gm, " ")
+                                        .replace(/"/g, '""');
+                rowData.push('"' + text + '"');
+            }
+        });
+        csvContent.push(rowData.join(","));
+    });
+    
+    const csvFile = new Blob([csvContent.join("\n")], { type: "text/csv" });
+    const downloadLink = document.createElement("a");
+    downloadLink.download = filename;
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+    downloadLink.click();
+}</code></pre>
+            </div>
+            
+            <h4>Acta de Evaluación (HTML para impresión)</h4>
+            <div class="code-container">
+                <pre><code class="language-java">// En DocenteController.java - Generación de acta
+private void generarActaAjax(HttpServletRequest request, HttpServletResponse response) {
+    int tesisId = Integer.parseInt(request.getParameter("tesisId"));
+    TesisDAO dao = new TesisDAO();
+    Tesis tesis = dao.buscarPorId(tesisId);
+    
+    // Generar HTML formateado para impresión
+    out.println("<div class='p-5' style='font-family: \"Times New Roman\", serif;'>");
+    out.println("<h3 class='text-center'>ACTA DE EVALUACIÓN DE TESIS</h3>");
+    out.println("<p><strong>Título:</strong> " + tesis.getTitulo() + "</p>");
+    out.println("<p><strong>Estudiante:</strong> " + tesis.getNombreAlumno() + "</p>");
+    out.println("<p><strong>Docente Revisor:</strong> " + tesis.getNombreDocente() + "</p>");
+    out.println("<div class='text-center no-print'>");
+    out.println("<button onclick='window.print()' class='btn btn-dark'>");
+    out.println("<i class='bi bi-printer'></i> Imprimir Acta");
+    out.println("</button></div>");
+    out.println("</div>");
+}</code></pre>
+            </div>
+            
+            <h4>Ideas Adicionales para Reportes</h4>
+            <div class="alert alert-info">
+                <h5><i class="fas fa-lightbulb"></i> Reportes que podrías implementar:</h5>
+                <ul>
+                    <li><strong>Reporte de Plazos Vencidos</strong> - Alertas automáticas por email</li>
+                    <li><strong>Gráficos de Progreso</strong> - Chart.js para visualización</li>
+                    <li><strong>Reporte de Productividad por Docente</strong> - Tesis revisadas por periodo</li>
+                    <li><strong>Estadísticas por Facultad/Departamento</strong> - Análisis institucional</li>
+                    <li><strong>Reporte de Calidad</strong> - Puntajes promedio de rúbrica</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="referencias" class="tab-content">
+            <h3>Recursos de Reporting</h3>
+            <a href="https://www.chartjs.org/" class="resource-link" target="_blank">
+                <i class="fas fa-chart-bar"></i> Chart.js - Gráficos JavaScript
+            </a>
+            <a href="https://github.com/SheetJS/sheetjs" class="resource-link" target="_blank">
+                <i class="fas fa-file-excel"></i> SheetJS - Excel en JavaScript
+            </a>
+        </div>
+    `
+},
+
+15: {
+    title: `Semana ${week}: Proyecto Final Integrado`,
+    body: `
+        <div class="week-tabs">
+            <div class="week-tab active" data-tab="presentacion">Presentación</div>
+            <div class="week-tab" data-tab="ejemplos">Proyecto Completo</div>
+            <div class="week-tab" data-tab="referencias">Enlaces de Referencia</div>
+        </div>
+        
+        <div id="presentacion" class="tab-content active">
+            <h3>Sistema Completo de Gestión de Tesis</h3>
+            <p>Integración final de todos los módulos desarrollados en un sistema funcional para la gestión del proceso de tesis universitarias.</p>
+            
+            <h3>Características Principales</h3>
+            <ul>
+                <li><strong>Cuatro Roles Complejos</strong> - Admin, Docente/Asesor, Jurado, Estudiante</li>
+                <li><strong>Flujo de Trabajo Definido</strong> - Asignación → Revisión → Evaluación → Aprobación</li>
+                <li><strong>Sistema de Rúbrica</strong> - 38 criterios de evaluación con puntuación</li>
+                <li><strong>Gestión de Documentos</strong> - Upload, versionado y descarga segura de PDF</li>
+                <li><strong>Sistema de Notificaciones</strong> - Alertas en tiempo real para todos los usuarios</li>
+                <li><strong>Reportes y Dashboard</strong> - Análisis y estadísticas del sistema</li>
+            </ul>
+            
+            <h3>Tecnologías Integradas</h3>
+            <ul>
+                <li>Frontend: JSP, Bootstrap 5, JavaScript, AJAX</li>
+                <li>Backend: Java Servlets, JDBC, DAO Pattern</li>
+                <li>Base de Datos: MySQL 8.0</li>
+                <li>Servidor: Apache Tomcat 10+</li>
+                <li>Herramientas: NetBeans, MySQL Workbench, Figma</li>
+            </ul>
+        </div>
+        
+        <div id="ejemplos" class="tab-content">
+            <h3>Proyecto Final - Estructura Completa</h3>
+            
+            <h4>Arquitectura del Sistema</h4>
+            <div class="code-container">
+                <pre><code class="language-markdown">ProyectoTallerJosue/
+├── FinalProyecto-1.0-SNAPSHOT/
+│   ├── Web Pages/                  # Vistas JSP
+│   │   ├── login.jsp
+│   │   ├── admin.jsp
+│   │   ├── docente.jsp
+│   │   └── alumno.jsp
+│   ├── src/
+│   │   ├── com.gestortes.conexion/ # Conexión BD
+│   │   │   └── ConexionDB.java
+│   │   ├── com.gestortes.dao/      # Data Access Objects
+│   │   │   ├── AdminDAO.java
+│   │   │   ├── AlumnoDAO.java
+│   │   │   ├── DocenteDAO.java
+│   │   │   ├── NotificacionDAO.java
+│   │   │   ├── TesisDAO.java
+│   │   │   └── UsuarioDAO.java
+│   │   ├── com.gestortes.modelo/   # Modelos/Entidades
+│   │   │   ├── Admin.java
+│   │   │   ├── Alumno.java
+│   │   │   ├── Docente.java
+│   │   │   ├── HistorialRevision.java
+│   │   │   ├── Notificacion.java
+│   │   │   ├── Tesis.java
+│   │   │   └── Usuario.java
+│   │   └── com.gestortes.servlets/ # Controladores
+│   │       ├── AdminController.java
+│   │       ├── AlumnoController.java
+│   │       ├── DescargaServlet.java
+│   │       ├── DocenteController.java
+│   │       ├── LoginServlet.java
+│   │       └── LogoutServlet.java
+│   ├── web/
+│   │   ├── WEB-INF/
+│   │   └── META-INF/
+│   └── build/                      # Archivos compilados
+├── database/                       # Scripts SQL
+│   ├── schema.sql                  # Estructura de BD
+│   └── data.sql                    # Datos iniciales
+├── docs/                           # Documentación
+│   ├── ManualUsuario.md
+│   ├── ManualTecnico.md
+│   └── Diagramas/
+├── README.md                       # Documentación principal
+└── .gitignore</code></pre>
+            </div>
+            
+            <h4>Main Application - Punto de Entrada</h4>
+            <div class="code-container">
+                <pre><code class="language-java">/*
+ * Sistema de Gestión de Tesis Universitarias
+ * Universidad: UPLA
+ * Curso: Taller VII
+ * Desarrollador: Josue Anthony Arredondo Condor
+ * Año: 2024
+ * 
+ * Arquitectura MVC con Java EE
+ * - Capa Vista: JSP + Bootstrap
+ * - Capa Controlador: Servlets
+ * - Capa Modelo: JavaBeans + DAO Pattern
+ * - Base de Datos: MySQL + JDBC
+ */
+
+// El sistema se despliega en Apache Tomcat
+// URL de acceso: http://localhost:8080/ProyectoTallerJosue/</code></pre>
+            </div>
+            
+            <h4>Flujo de Trabajo del Sistema</h4>
+            <div class="code-container">
+                <pre><code class="language-markdown">1. ADMINISTRADOR
+   ├── Crea usuarios (docentes, estudiantes)
+   ├── Asigna tesis a estudiantes
+   ├── Monitorea progreso general
+   └── Genera reportes institucionales
+
+2. ESTUDIANTE
+   ├── Sube versiones de su tesis
+   ├── Recibe feedback del asesor
+   ├── Consulta calificaciones
+   └── Sigue plazos establecidos
+
+3. DOCENTE/ASESOR
+   ├── Revisa tesis asignadas
+   ├── Aplica rúbrica de 38 puntos
+   ├── Proporciona feedback detallado
+   ├── Establece plazos de corrección
+   └── Aprueba/observa/rechaza
+
+4. JURADO
+   ├── Evalúa tesis finales
+   ├── Asigna calificación final
+   └── Genera actas de evaluación</code></pre>
+            </div>
+            
+            <h4>Acceso al Proyecto Completo</h4>
+            <div class="text-center mt-4">
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue" 
+                   target="_blank" class="btn btn-success btn-lg">
+                    <i class="fab fa-github"></i> Repositorio Completo en GitHub
+                </a>
+                <p class="mt-3">
+                    <strong>Instrucciones de despliegue:</strong>
+                    <br>
+                    1. Clonar repositorio<br>
+                    2. Importar en NetBeans como proyecto web<br>
+                    3. Ejecutar scripts SQL en MySQL Workbench<br>
+                    4. Configurar conexión en ConexionDB.java<br>
+                    5. Desplegar en Apache Tomcat
+                </p>
+            </div>
+        </div>
+        
+        <div id="referencias" class="tab-content">
+            <h3>Recursos y Documentación</h3>
+            <a href="https://github.com/Josue2606/ProyectoTallerJosue" class="resource-link" target="_blank">
+                <i class="fab fa-github"></i> Repositorio Oficial del Proyecto
+            </a>
+            <a href="https://tomcat.apache.org/tomcat-10.0-doc/" class="resource-link" target="_blank">
+                <i class="fas fa-server"></i> Apache Tomcat Documentation
+            </a>
+            <a href="https://netbeans.apache.org/" class="resource-link" target="_blank">
+                <i class="fas fa-code"></i> Apache NetBeans IDE
             </a>
         </div>
     `
