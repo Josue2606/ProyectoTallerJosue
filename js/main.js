@@ -1242,7 +1242,7 @@ Contraseña: prototipo2024
             
             <h4>Vista en GitHub</h4>
             <div class="text-center mt-4">
-                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/FinalProyecto-1.0-SNAPSHOT/Web%20Pages" 
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana10/Codigos"
                    target="_blank" class="btn btn-success">
                     <i class="fab fa-github"></i> Ver Interfaces JSP en GitHub
                 </a>
@@ -1380,7 +1380,7 @@ public class HistorialRevision {
             
             <h4>Acceso a GitHub</h4>
             <div class="text-center mt-4">
-                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/FinalProyecto-1.0-SNAPSHOT/src/java/com/gestortes/modelo" 
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana11/Modelo"
                    target="_blank" class="btn btn-success">
                     <i class="fab fa-github"></i> Ver Modelos en GitHub
                 </a>
@@ -1513,7 +1513,7 @@ public class AdminController extends HttpServlet {
             
             <h4>Acceso a GitHub</h4>
             <div class="text-center mt-4">
-                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/FinalProyecto-1.0-SNAPSHOT/src/java/com/gestortes/servlets" 
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana1/Controlador"
                    target="_blank" class="btn btn-success">
                     <i class="fab fa-github"></i> Ver Servlets en GitHub
                 </a>
@@ -1629,7 +1629,7 @@ FROM alumnos;</code></pre>
             
             <h4>Acceso a GitHub</h4>
             <div class="text-center mt-4">
-                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/FinalProyecto-1.0-SNAPSHOT/src/java/com/gestortes/conexion" 
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana13" 
                    target="_blank" class="btn btn-success">
                     <i class="fab fa-github"></i> Ver Conexión JDBC en GitHub
                 </a>
@@ -1920,7 +1920,7 @@ private void generarActaAjax(HttpServletRequest request, HttpServletResponse res
             
             <h4>Acceso al Proyecto Completo</h4>
             <div class="text-center mt-4">
-                <a href="https://github.com/Josue2606/ProyectoTallerJosue" 
+                <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana15/FinalProyecto-Completo"
                    target="_blank" class="btn btn-success btn-lg">
                     <i class="fab fa-github"></i> Repositorio Completo en GitHub
                 </a>
@@ -1938,7 +1938,7 @@ private void generarActaAjax(HttpServletRequest request, HttpServletResponse res
         
         <div id="referencias" class="tab-content">
             <h3>Recursos y Documentación</h3>
-            <a href="https://github.com/Josue2606/ProyectoTallerJosue" class="resource-link" target="_blank">
+            <a href="https://github.com/Josue2606/ProyectoTallerJosue/tree/main/semanas/Semana15" class="resource-link" target="_blank">
                 <i class="fab fa-github"></i> Repositorio Oficial del Proyecto
             </a>
             <a href="https://tomcat.apache.org/tomcat-10.0-doc/" class="resource-link" target="_blank">
